@@ -10,7 +10,36 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+@keyframes banner-animation {
+0%{
+ opacity: 0;
+ transform: translateX(-20px);
+}
+50%{
+ opacity: 0.5;
+ transform: translateX(-10px);
+}
+100%{
+ opacity: 1;
+ transform: translateX(0px);
+}
+}
 
+
+@keyframes banner-player-animation {
+0%{
+ opacity: 0.5;
+ transform: translateX(-20px);
+}
+50%{
+ opacity: 0.7;
+ transform: translateX(-10px);
+}
+100%{
+ opacity: 1;
+ transform: translateX(0px);
+}
+}
 .banner {
   display: flex;
   justify-content: center;
@@ -20,6 +49,7 @@
   border-radius: 15px;
   margin: 50px auto;
   padding: 40px 20px;
+  animation: banner-animation 0.7s ease-out;
 }
 
 .banner-left {
@@ -34,6 +64,7 @@
   display: block;
   max-width: 100%;
   flex: 1;
+  animation: banner-player-animation 1.5s ease-in infinite;
 }
 
 .btn {
